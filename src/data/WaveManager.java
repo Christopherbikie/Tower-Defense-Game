@@ -2,7 +2,7 @@ package data;
 
 public class WaveManager {
 	
-	private float timeSinceLastWave, timeBetweenEnemys;
+	private float timeBetweenEnemys;
 	private int waveNumber, enemysPerWave;
 	private Enemy enemyType;
 	private Wave currentWave;
@@ -11,7 +11,6 @@ public class WaveManager {
 		this.enemyType = enemyType;
 		this.timeBetweenEnemys = timeBetweenEnemys;
 		this.enemysPerWave = enemysPerWave;
-		this.timeSinceLastWave = 0;
 		this.waveNumber = 0;
 		this.currentWave = null;
 		newWave();
