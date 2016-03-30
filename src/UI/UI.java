@@ -75,8 +75,17 @@ public class UI {
 		}
 		
 		public void addButton(Button b) {
+			setButton(b);
+		}
+		
+		public void quickAdd(String name, String buttonTexture) {
+			Button b = new Button(name, QuickLoad(buttonTexture), 0, 0);
+			setButton(b);
+		}
+		
+		private void setButton(Button b) {
 			if (optionsWidth != 0)
-				b.setY(y + (buttonAmount / optionsWidth) * TILE_SIZE);
+				b.setY(y + (buttonAmount / optionsWidth) * (pading + TILE_SIZE) + pading);
 			b.setX(x + (buttonAmount % 2) * (pading + TILE_SIZE) + pading);
 			buttonAmount++;
 			menuButtons.add(b);
